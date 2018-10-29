@@ -1,6 +1,9 @@
 FROM python:alpine3.7
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-EXPOSE 5000
-CMD python ./main.py
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+CMD [ "python", "./app.py" ]
+# Set Environment Variables: KEY
