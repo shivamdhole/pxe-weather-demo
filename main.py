@@ -7,6 +7,7 @@ app = Flask(__name__)
 def student():
     return render_template('weather.html')
 
+
 @app.route('/result', methods=['POST', 'GET'])
 def result():
     if request.method == 'POST':
@@ -15,7 +16,6 @@ def result():
         #out["new attribute"] = 100
         #print(type(result))
         #Getting Weather Details'''
-		
         key = os.environ['KEY']
         out = {}
         owm = pyowm.OWM(key)
