@@ -7,7 +7,6 @@ app = Flask(__name__)
 def student():
     return render_template('weather.html')
 
-
 @app.route('/result', methods=['POST', 'GET'])
 def result():
     if request.method == 'POST':
