@@ -15,6 +15,7 @@ def result():
         #out["new attribute"] = 100
         #print(type(result))
         #Getting Weather Details'''
+		
         key = os.environ['KEY']
         out = {}
         owm = pyowm.OWM(key)
